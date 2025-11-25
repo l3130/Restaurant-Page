@@ -1,0 +1,87 @@
+/* Basic site styles matching the honey/yellow visuals */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #39290b;
+  background-color: #f6e3a0;
+  /* subtle repeating pattern approximating honeycomb */
+  background-image: radial-gradient(circle at 20% 20%, rgba(255,210,120,0.15) 6%, transparent 7%),
+                    radial-gradient(circle at 80% 80%, rgba(255,190,60,0.10) 6%, transparent 7%);
+  background-size: 140px 140px;
+}
+
+header {
+  background: #f7d86b;
+  padding: 8px 0 18px 0;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.25);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+nav button {
+  background: linear-gradient(#f7c84a, #f0a92f);
+  border: 2px solid #5b3b08;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #2b1808;
+}
+
+nav button:hover { transform: translateY(-2px); }
+
+.active-tab {
+  box-shadow: 0 8px 0 rgba(90,50,10,0.15) inset;
+}
+
+#content {
+  padding: 30px 20px 80px 20px;
+}
+
+.home-container,
+.menu-container,
+.contact-container {
+  max-width: 920px;
+  margin: 18px auto;
+  background: rgba(255,245,200,0.9);
+  border-radius: 22px;
+  padding: 28px 36px;
+  box-shadow: 0 6px 0 rgba(150,90,20,0.12);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.home-container h1 {
+  margin: 8px 0 6px;
+  font-size: 36px;
+}
+.home-container h2 { margin: 0 0 12px; font-weight: 600; color: #6b3b08; }
+.home-container p { line-height: 1.5; }
+
+.menu-list { display: grid; gap: 14px; margin-top: 12px; }
+.menu-item { background: #fff5d6; padding: 12px 14px; border-radius: 10px; border-left: 8px solid #c56b00; }
+.menu-item h3 { margin: 0 0 6px; font-size: 18px; }
+.menu-item p { margin: 0; color: #4b2f10; }
+
+.contact-block { background: #ffd84a; padding: 14px; border-radius: 12px; margin: 12px 0; border-left: 12px solid #b45a00; }
+.contact-block h3 { margin: 0 0 8px; }
+
+@media (max-width: 640px) {
+  nav { gap: 6px; }
+  nav button { padding: 10px 12px; }
+  .home-container, .menu-container, .contact-container { padding: 18px; margin: 10px; }
+}
