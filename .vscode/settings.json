@@ -1,0 +1,13 @@
+{
+    // Hide build artifacts and dependency folders from Explorer and Search
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/dist": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/dist": true
+    }
+    ,
+    "git.showUntrackedFiles": false
+}
